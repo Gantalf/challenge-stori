@@ -4,7 +4,6 @@ const nodemailer = require('nodemailer');
 
 const { HOST_NAME, PORT, USER_EMAIL, PASS } = process.env;
 
-console.log(HOST_NAME, PORT, USER_EMAIL, PASS);
 
 function totalBalance(data) {
   let dataParseNum = data.map(e => {
@@ -60,7 +59,6 @@ function sendEmail(balance, averageDebit, averageCredit, months) {
 
   let nameMonths = ['0', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-  //let keyMonths = Object.key
 
   let txt = '';
 

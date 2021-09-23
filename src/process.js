@@ -10,7 +10,7 @@ fs.createReadStream('./data.csv')
   .on('data', (row) => {
     saveData.push(row);
   })
-  .on('end', async () => {
+  .on('end', () => {
 
     const resultBalance = totalBalance(saveData);
 
@@ -19,10 +19,8 @@ fs.createReadStream('./data.csv')
 
     const months = date(saveData);
 
-    await sendEmail(resultBalance, resultAverageDebit, resultAverajeCretit, months);
+    sendEmail(resultBalance, resultAverageDebit, resultAverajeCretit, months);
 
-    console.log('result', months)
-    console.log('finished');
   })
 
 
