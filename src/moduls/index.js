@@ -66,8 +66,6 @@ function sendEmail(balance, averageDebit, averageCredit, months) {
     txt += `Number of transactions in ${nameMonths[parseFloat(key)]}: ${months[key]}\n`;
   }
 
-  console.log('este es el txt', txt);
-
   let transport = nodemailer.createTransport({
     host: `${HOST_NAME}`,
     port: `${PORT}`,
