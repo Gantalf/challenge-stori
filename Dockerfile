@@ -6,10 +6,10 @@ FROM node:10
 
 COPY / .
 
-ENV HOST_NAME=smtp.mailtrap.io
-ENV PORT=2525
-ENV USER_EMAIL=c196281cf44c32
-ENV PASS=d99a357c5350fd
+ENV HOST_NAME=
+ENV PORT=
+ENV USER_EMAIL=
+ENV PASS=
 
 
 ENTRYPOINT ["node", "src/process.js"]
