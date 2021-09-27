@@ -5,7 +5,7 @@ const { totalBalance, average, date, sendEmail } = require('./moduls');
 
 let saveData = [];
 
-fs.createReadStream('./data.csv')
+fs.createReadStream('/src/data.csv')
   .pipe(csv())
   .on('data', (row) => {
     saveData.push(row);

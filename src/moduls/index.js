@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const nodemailer = require('nodemailer');
 
-const { HOST_NAME, PORT, USER_EMAIL, PASS } = process.env;
+const { config } = require('../config/index');
 
 
 function totalBalance(data) {
@@ -67,11 +67,11 @@ function sendEmail(balance, averageDebit, averageCredit, months) {
   }
 
   let transport = nodemailer.createTransport({
-    host: `${HOST_NAME}`,
-    port: `${PORT}`,
+    host: config.host,
+    port: config.port,
     auth: {
-      user: `${USER_EMAIL}`,
-      pass: `${PASS}`
+      user: config.user_email,
+      pass: config.pass
     }
   })
 
