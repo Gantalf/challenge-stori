@@ -16,7 +16,7 @@ Parado en la raíz del proyecto ejecutar
 npm install
 ```
 
-Luego, crearse una cuenta en mailtrap.io, donde creará un email falso para la prueba.
+Luego, debe crearse una cuenta en mailtrap.io, donde creará un email falso para la prueba.
 Dentro del proyecto encontrará un archivo Dockerfile, que contiene variables de entorno y con las credenciales dadas luego de crear su cuenta, rellenar las variabes de entorno como se muestra a continuación:
 
 ```shell
